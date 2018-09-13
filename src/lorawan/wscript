@@ -22,7 +22,12 @@ def build(bld):
         'model/lorawan-phy.cc',
 	'model/lorawan-spectrum-signal-parameters.cc',
 	'model/lorawan-spectrum-value-helper.cc',
+        'model/lorawan-radio-energy-model.cc',
+        'model/lorawan-current-model.cc',
         'helper/lorawan-helper.cc',
+        'helper/lorawan-gateway-helper.cc',
+        'helper/lorawan-enddevice-helper.cc',
+        'helper/lorawan-radio-energy-model-helper.cc',
         ]
 
     module_test = bld.create_ns3_module_test_library('lorawan')
@@ -52,7 +57,12 @@ def build(bld):
         'model/lorawan-phy.h',
 	'model/lorawan-spectrum-signal-parameters.h',
 	'model/lorawan-spectrum-value-helper.h',
+        'model/lorawan-radio-energy-model.h',
+        'model/lorawan-current-model.h',
         'helper/lorawan-helper.h',
+        'helper/lorawan-gateway-helper.h',
+        'helper/lorawan-enddevice-helper.h',
+        'helper/lorawan-radio-energy-model-helper.h'
         ]
 
     if bld.env.ENABLE_EXAMPLES:

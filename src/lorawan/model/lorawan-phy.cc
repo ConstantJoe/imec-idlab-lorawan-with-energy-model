@@ -53,6 +53,14 @@ LoRaWANPhy::GetTypeId (void)
                      "The state of the transceiver",
                      MakeTraceSourceAccessor (&LoRaWANPhy::m_trxState),
                      "ns3::TracedValueCallback::LoRaWANPhyEnumeration")
+    .AddTraceSource ("TxPower",
+                     "The transmit power of the transceiver, in dBm",
+                     MakeTraceSourceAccessor (&LoRaWANPhy::m_txPower),
+                     "ns3::TracedValueCallback::double")
+    .AddTraceSource("BandwidthOfCurrentChannel",
+                     "The bandwidth of the currently used channel, in Hz",
+                     MakeTraceSourceAccessor (&LoRaWANPhy::m_bandwidthOfCurrentChannel),
+                     "ns3::TracedValueCallback::uint32_t")
     //.AddTraceSource ("TrxState",
     //                 "The state of the transceiver",
     //                 MakeTraceSourceAccessor (&LoRaWANPhy::m_trxStateLogger),
